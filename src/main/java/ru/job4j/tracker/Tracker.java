@@ -52,12 +52,12 @@ public class Tracker {
     public boolean replace(int id, Item item) {
         boolean result = false;
         int index = indexOf(id);
-        if (index == -1){
+        if (index == -1) {
             return result;
-        }
-        else {
+        } else {
         items[index].setName(item.getName());
-        result = true;}
+        result = true;
+        }
         return result;
     }
 }
