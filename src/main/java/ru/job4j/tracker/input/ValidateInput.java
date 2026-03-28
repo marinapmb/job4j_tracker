@@ -16,23 +16,4 @@ public class ValidateInput extends ConsoleInput {
         } while (invalid);
         return value;
     }
-
-    @Override
-    public int askInt(String question, int min, int max) {
-        boolean invalid = true;
-        int value = -1;
-        do {
-            try {
-                value = super.askInt(question);
-                if (value < min || value > max) {
-                    System.out.println("Пожалуйста, выберите число от " + min + " до " + max);
-                } else {
-                    invalid = false;
-                }
-            } catch (NumberFormatException nfe) {
-                System.out.println("Пожалуйста, введите корректное число");
-            }
-        } while (invalid);
-        return value;
-    }
 }

@@ -16,15 +16,4 @@ public class ConsoleInput implements Input {
         return Integer.parseInt(askStr(question));
     }
 
-    @Override
-    public int askInt(String question, int min, int max) {
-        int value;
-        do {
-            value = askInt(question);
-            if (value < min || value > max) {
-                System.out.println("Пожалуйста, выберите число от " + min + " до " + max);
-            }
-        } while (value < min || value > max);
-        return value;
-    }
 }
